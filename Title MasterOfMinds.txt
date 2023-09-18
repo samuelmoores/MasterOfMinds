@@ -1,0 +1,32 @@
+Title: MasterOfMinds
+
+Goal: Guess the correct patern of charaters
+
+Setup: Randomized 6 character string ( "red" , "blue", "green", ...)
+
+Gameplay loop:
+	Guessing
+		-type in a 6 character string
+		-computer tell user which characters are correct
+
+Score:
+	-Start at 100
+	- each guess is minus 1
+
+
+--------------code-------------
+variables:
+	-int score
+	-char* red, char* blue, char* green.... 
+	-char** randomizedColorArray
+	-int randomizedColorArraySize = 6;
+
+Rand Color Array
+-rand() function - get a randorm 0 - 6 (end of the color array)
+-
+	
+	
+		
+
+
+ 
