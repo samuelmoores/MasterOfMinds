@@ -1,5 +1,6 @@
 #include <random>
 #include <iostream>
+#include <string>
 
 int getRandomNumber_1_6()
 {
@@ -12,6 +13,13 @@ int getRandomNumber_1_6()
 
 int main()
 {
-    std::cout << getRandomNumber_1_6() << std::endl;
+    const int size = 6;
+    std::string Colors[] = {"red", "blue", "green", "yellow", "orange", "black"};
+
+    int randomColorIndex = getRandomNumber_1_6();
+
+    //output random color with random number
+    std::cout << Colors[randomColorIndex] << std::endl;
+
 
 }
