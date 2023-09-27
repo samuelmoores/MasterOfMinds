@@ -33,7 +33,8 @@ int main()
     //----------------------Start Game---------------------------
     while (playGame)
     {
-
+        std::cout << "Welcome to Master of Minds\n";
+        std::cout << "Enter your guess for the first element of the Computer's Array\n";
     }
 
 }
