@@ -2,24 +2,38 @@
 #include <iostream>
 #include <string>
 
-int getRandomNumber_1_6()
+int getRandomNumber_0_5()
 {
     std::random_device dev;
     std::mt19937 rng(dev());
-    std::uniform_int_distribution<std::mt19937::result_type> dist6(1, 6); // distribution in range [1, 6]
+    std::uniform_int_distribution<std::mt19937::result_type> dist6(0, 5); // distribution in range [1, 6]
 
     return dist6(rng);
 }
 
 int main()
 {
-    const int size = 6;
-    std::string Colors[] = {"red", "blue", "green", "yellow", "orange", "black"};
+    //------------------------Variables--------------------------
+    bool playGame = false;
 
-    int randomColorIndex = getRandomNumber_1_6();
+    //-----------------------Initialize Arrays-------------------
+    const int ComputerColorsSize = 6;
+    std::string Colors[] = { "red", "blue", "green", "yellow", "orange", "black" };
+    std::string ColorsComputer[ComputerColorsSize];
 
-    //output random color with random number
-    std::cout << Colors[randomColorIndex] << std::endl;
+    for (int i = 0; i < ComputerColorsSize; i++)
+    {
+        int randomColorIndex = getRandomNumber_0_5();
+        ColorsComputer[i] = Colors[randomColorIndex];
+    }
 
+    std::cout << "Are you ready to play? (0 for yes, 1 for no) ";
+    std::cin >> playGame;
+
+    //----------------------Start Game---------------------------
+    while (playGame)
+    {
+
+    }
 
 }
