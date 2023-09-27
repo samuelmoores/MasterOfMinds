@@ -15,6 +15,7 @@ int main()
 {
     //------------------------Variables--------------------------
     bool playGame = false;
+    std::string playerGuess = "none";
 
     //-----------------------Initialize Arrays-------------------
     const int ComputerColorsSize = 6;
@@ -31,10 +32,12 @@ int main()
     std::cin >> playGame;
 
     //----------------------Start Game---------------------------
+    std::cout << "Welcome to Master of Minds\n";
+
     while (playGame)
     {
-        std::cout << "Welcome to Master of Minds\n";
         std::cout << "Enter your guess for the first element of the Computer's Array\n";
+        std::cin >> playerGuess;
     }
 
 }
