@@ -1,19 +1,21 @@
 #include <random>
 #include <iostream>
 #include <string>
+#include <ctime>
 
 int getRandomNumber_0_5()
 {
     std::random_device dev;
     std::mt19937 rng(dev());
     std::uniform_int_distribution<std::mt19937::result_type> dist6(0, 5); // distribution in range [1, 6]
+    dist6(rng);
 
-    return dist6(rng);
+    srand(time(0));
+    return (rand() % 5 + 0);
 }
 
 void OutputOpeningMenu()
 {
-
     std::cout << "The computer has choosen six colors with the corresponding numbers:\n";
     std::cout << "(0) red\n(1) blue\n(2) green\n(3) yellow\n(4) orange\n(5) black\n";
     std::cout << "----------------------------------------------------------------------\n";
@@ -40,7 +42,6 @@ void OutputComputersColors(bool playerGuesses[], std::string ColorsComputer[], i
         }
         if (i == ComputerColorsSize - 1)
             std::cout << "\n";
-
     }
 }
 
@@ -75,7 +76,6 @@ int main()
     std::cin >> playGame;
 
     //----------------------Start Game---------------------------
-
     while (playGame)
     {
         std::cout << "----------------------------------------------------------------------\n";
